@@ -1,0 +1,47 @@
+﻿<Window x:Class="PointWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PointWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">Введите координаты A,B и C</Label>
+                <StackPanel Margin="10">
+                    <Label Margin="5">A</Label>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="AxTextBox">x</TextBox>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="AyTextBox">y</TextBox>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Label Margin="5">B</Label>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="BxTextBox">x</TextBox>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="ByTextBox">y</TextBox>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Label Margin="5">C</Label>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="CxTextBox">x</TextBox>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="CyTextBox">y</TextBox>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Label Margin="5">d</Label>
+                    <TextBox Margin="5" Width="100" Height="30" x:Name="dTextBox"></TextBox>
+                <TextBlock x:Name="ErrorLabel" Margin="5"></TextBlock>
+                </StackPanel>
+                <Button Click="Button_Click" Margin="10" Height="20" Width="40">OK</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label>Результаты</Label>
+            <TextBlock x:Name="NPointTextBlock"></TextBlock>
+            <TextBlock x:Name="MPointTextBlock"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
